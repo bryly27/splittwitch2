@@ -1,0 +1,117 @@
+<div ng-controller="splitController">
+	<div>
+    <a href="" class="lead logo pull-right" ng-click="toggleChat()">Chat</a>
+  </div>
+	<div class="row">
+
+		<div class="col-sm-9 screens">
+			<div class="row">
+
+				<div class="col-sm-6">
+					<div class="channel">
+
+						<div class="form">
+						  <form ng-submit="submitOne(one)">
+						    <input type="text" ng-model="one" placeholder="channel 1">
+						    <input type="submit">
+						  </form>
+						</div>
+						<iframe ng-src="{{splitOneVid}}" frameborder="0" scrolling="no" height="50%;" width="100%" position="relative"></iframe>
+
+					</div>
+				</div>
+
+				<div class="col-sm-6">
+					<div class="channel">
+
+						<div class="form">
+						  <form ng-submit="submitTwo(two)">
+						    <input type="text" ng-model="two" placeholder="channel 2">
+						    <input type="submit">
+						  </form>
+						</div>
+						<iframe ng-src="{{splitTwoVid}}" frameborder="0" scrolling="no" height="50%;" width="100%" position="relative"></iframe>
+
+					</div>
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm-6">
+					<div class="channel">
+
+						<div class="form">
+						  <form ng-submit="submitThree(three)">
+						    <input type="text" ng-model="three" placeholder="channel 3">
+						    <input type="submit">
+						  </form>
+						</div>
+						<iframe ng-src="{{splitThreeVid}}" frameborder="0" scrolling="no" height="50%;" width="100%" position="relative"></iframe>
+
+					</div>
+				</div>
+
+				<div class="col-sm-6">
+					<div class="channel">
+
+						<div class="form">
+						  <form ng-submit="submitFour(four)">
+						    <input type="text" ng-model="four" placeholder="channel 4">
+						    <input type="submit">
+						  </form>
+						</div>
+						<iframe ng-src="{{splitFourVid}}" frameborder="0" scrolling="no" height="50%;" width="100%" position="relative"></iframe>
+
+					</div>
+				</div>
+
+			</div>
+
+
+
+
+
+
+
+
+		</div>
+
+    <div class="col-sm-3" ng-show="sideChat === true">
+
+			<ul class="nav nav-pills">
+			  <li role="presentation" class="active"><a href="" class="logo" ng-click="showChat(1)">One</a></li>
+			  <li role="presentation"><a href="" class="logo" ng-click="showChat(2)">Two</a></li>
+			  <li role="presentation"><a href="" class="logo" ng-click="showChat(3)">Three</a></li>
+			  <li role="presentation"><a href="" class="logo" ng-click="showChat(4)">Four</a></li>
+			</ul>
+
+			<div ng-show="chatbox === 1">
+				<iframe ng-src="{{splitOneChat}}" frameborder="0" scrolling="no" height="100%" width="100%;" position="relative"></iframe>
+			</div>
+			
+			<div ng-show="chatbox === 2">
+				<iframe ng-src="{{splitTwoChat}}" frameborder="0" scrolling="no" height="100%" width="100%;" position="relative"></iframe>
+			</div>
+
+			<div ng-show="chatbox === 3">
+				<iframe ng-src="{{splitThreeChat}}" frameborder="0" scrolling="no" height="100%" width="100%;" position="relative"></iframe>
+			</div>
+
+			<div ng-show="chatbox === 4">
+				<iframe ng-src="{{splitFourChat}}" frameborder="0" scrolling="no" height="100%" width="100%;" position="relative"></iframe>
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+</div>
