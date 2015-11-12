@@ -1,5 +1,5 @@
 .top {
-	padding: 55px 20px 150px 20px;
+	padding: 55px 20px 85px 20px;
 	background-color: black;
 	height: 100%;
 }
@@ -20,41 +20,13 @@
 	background-color: #212121;
 }
 
-.body {
-	background-image: url("../images/background2.jpeg");
-	background-repeat: no-repeat;
-  background-position: 10% 10%;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  font-family: 'Press Start 2P', cursive;
-  color: #dddddd;
-}
 .content {
 	text-align: center;
 	margin-top: 100px;
 }
-.time {
-	display: inline-block;
-	margin: 10px;
-}
-#countdown {
-	margin-top: 50px;
-}
+
 .banner h1 {
 	font-size: 50px;
-}
-
-.time h2 {
-	border-bottom: 2px solid black;
-	font-size: 30px;
-}
-.socialIcons {
-	margin-top: 150px;
-}
-.socialIcons a {
-	color: #dddddd;
-	margin: 10px 20px;
 }
 
 .grey {
@@ -63,6 +35,12 @@
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
 	background-color: #282828;
+}
+
+.no-box {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
 }
 
 @media (max-width: 991px) {
