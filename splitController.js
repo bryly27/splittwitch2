@@ -58,6 +58,22 @@ split.controller('splitController', function($scope, $sce, $cookies, $window){
 		$scope.splitFourChat = $sce.trustAsResourceUrl($scope.trustFourChat);
 	}
 
+	$scope.submitFive = function(data){
+		$cookies.put('screenFive', data);
+		$scope.trustFiveVid = "http://player.twitch.tv/?channel=" + data;
+		$scope.splitFiveVid = $sce.trustAsResourceUrl($scope.trustFourVid);
+		$scope.trustFiveChat = "http://www.twitch.tv/" + $cookies.get('screenFive') + "/chat?popout=";
+		$scope.splitFiveChat = $sce.trustAsResourceUrl($scope.trustFiveChat);
+	}
+
+	$scope.submitSix = function(data){
+		$cookies.put('screenSix', data);
+		$scope.trustSixVid = "http://player.twitch.tv/?channel=" + data;
+		$scope.splitSixVid = $sce.trustAsResourceUrl($scope.trustSixVid);
+		$scope.trustSixChat = "http://www.twitch.tv/" + $cookies.get('screenSix') + "/chat?popout=";
+		$scope.splitSixChat = $sce.trustAsResourceUrl($scope.trustSixChat);
+	}
+
 	$scope.chatbox = 1;
 
 	$scope.showChat = function(data){
@@ -70,6 +86,8 @@ split.controller('splitController', function($scope, $sce, $cookies, $window){
 		$cookies.remove('screenTwo');
 		$cookies.remove('screenThree');
 		$cookies.remove('screenFour');	
+		$cookies.remove('screenFive');
+		$cookies.remove('screenSix');	
 		$window.location.reload();
 	})
 
@@ -80,6 +98,9 @@ split.controller('splitController', function($scope, $sce, $cookies, $window){
 	}).mouseleave(function(){
 		$(this).find('form').fadeOut();
 	})
+
+
+
 	
 
 	var timeoutid = 0;
@@ -92,15 +113,6 @@ split.controller('splitController', function($scope, $sce, $cookies, $window){
 	function hideMenu(){
 		$('nav').fadeOut();
 	};
-
-	$('.nav-pills a').each(function(){
-		$(this).click(function(){
-			$('.nav-pills li').each(function(){
-				$('.nav-pills li').removeClass('active');
-			})
-			$(this).parent().addClass('active');
-		})
-	})
 
 	$scope.sideChat = true;
 

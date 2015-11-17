@@ -7,7 +7,7 @@
 		<div class="col-sm-9 screens">
 			<div class="row">
 
-				<div class="col-sm-6">
+				<div class="col-sm-4">
 					<div class="channel" ng-class="{grey: !splitOneVid }" ng-click="showChat(1)">
 
 						<div class="form">
@@ -22,7 +22,7 @@
 					</div>
 				</div>
 
-				<div class="col-sm-6">
+				<div class="col-sm-4">
 					<div class="channel" ng-class="{grey: !splitTwoVid }" ng-click="showChat(2)">
 
 						<div class="form">
@@ -37,11 +37,7 @@
 					</div>
 				</div>
 
-			</div>
-
-			<div class="row">
-
-				<div class="col-sm-6">
+				<div class="col-sm-4">
 					<div class="channel" ng-class="{grey: !splitThreeVid }" ng-click="showChat(3)">
 
 						<div class="form">
@@ -56,7 +52,12 @@
 					</div>
 				</div>
 
-				<div class="col-sm-6">
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm-4">
 					<div class="channel" ng-class="{grey: !splitFourVid }" ng-click="showChat(4)">
 
 						<div class="form">
@@ -70,6 +71,37 @@
 
 					</div>
 				</div>
+
+				<div class="col-sm-4">
+					<div class="channel" ng-class="{grey: !splitFiveVid }" ng-click="showChat(5)">
+
+						<div class="form">
+						  <form ng-submit="submitFive(five)">
+						    <input type="text" ng-model="five" placeholder="channel 5">
+						    <input type="submit">
+						    <span class="pull-right">chat</span>
+						  </form>
+						</div>
+						<iframe ng-src="{{splitFiveVid}}" frameborder="0" scrolling="no" height="50%;" width="100%" position="relative"></iframe>
+
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="channel" ng-class="{grey: !splitSixVid }" ng-click="showChat(6)">
+
+						<div class="form">
+						  <form ng-submit="submitSix(six)">
+						    <input type="text" ng-model="six" placeholder="channel 6">
+						    <input type="submit">
+						    <span class="pull-right">chat</span>
+						  </form>
+						</div>
+						<iframe ng-src="{{splitSixVid}}" frameborder="0" scrolling="no" height="50%;" width="100%" position="relative"></iframe>
+
+					</div>
+				</div>
+
 
 			</div>
 
@@ -89,6 +121,8 @@
 			  <li role="presentation" ng-class="{active: chatbox === 2}"><a href="" class="logo" ng-click="showChat(2)">2</a></li>
 			  <li role="presentation" ng-class="{active: chatbox === 3}"><a href="" class="logo" ng-click="showChat(3)">3</a></li>
 			  <li role="presentation" ng-class="{active: chatbox === 4}"><a href="" class="logo" ng-click="showChat(4)">4</a></li>
+			  <li role="presentation" ng-class="{active: chatbox === 5}"><a href="" class="logo" ng-click="showChat(5)">5</a></li>
+			  <li role="presentation" ng-class="{active: chatbox === 6}"><a href="" class="logo" ng-click="showChat(6)">6</a></li>
 			</ul>
 
 			<div ng-show="chatbox === 1">
@@ -105,6 +139,14 @@
 
 			<div ng-show="chatbox === 4">
 				<iframe ng-src="{{splitFourChat}}" frameborder="0" scrolling="no" height="100%" width="100%;" position="relative"></iframe>
+			</div>
+
+			<div ng-show="chatbox === 5">
+				<iframe ng-src="{{splitFiveChat}}" frameborder="0" scrolling="no" height="100%" width="100%;" position="relative"></iframe>
+			</div>
+
+			<div ng-show="chatbox === 6">
+				<iframe ng-src="{{splitSixChat}}" frameborder="0" scrolling="no" height="100%" width="100%;" position="relative"></iframe>
 			</div>
 
 		</div>

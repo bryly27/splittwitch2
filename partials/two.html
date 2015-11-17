@@ -8,12 +8,13 @@
 			<div class="row">
 
 				<div class="col-sm-6">
-					<div class="channel" ng-class="{grey: !splitTwoVid }">
+					<div class="channel" ng-class="{grey: !splitTwoVid }" ng-click="showChat(1)">
 
 						<div class="form">
 						  <form ng-submit="submitOne(one)">
 						    <input type="text" ng-model="one" placeholder="channel 1">
 						    <input type="submit">
+						    <span class="pull-right">chat</span>
 						  </form>
 						</div>
 						<iframe ng-src="{{splitOneVid}}" frameborder="0" scrolling="no" height="50%;" width="100%" position="relative"></iframe>
@@ -22,12 +23,13 @@
 				</div>
 
 				<div class="col-sm-6">
-					<div class="channel" ng-class="{grey: !splitThreeVid }">
+					<div class="channel" ng-class="{grey: !splitTwoVid }" ng-click="showChat(2)">
 
 						<div class="form">
 						  <form ng-submit="submitTwo(two)">
-						    <input type="text" ng-model="two" placeholder="channel 2">
+						    <input type="text" ng-model="two" placeholder="channel 2" ng-click="showChat(2)">
 						    <input type="submit">
+						    <span class="pull-right">chat</span>
 						  </form>
 						</div>
 						<iframe ng-src="{{splitTwoVid}}" frameborder="0" scrolling="no" height="50%;" width="100%" position="relative"></iframe>
@@ -47,8 +49,8 @@
     <div class="col-sm-3" ng-show="sideChat === true">
 
 			<ul class="nav nav-pills">
-			  <li role="presentation" class="active"><a href="" class="logo" ng-click="showChat(1)">One</a></li>
-			  <li role="presentation"><a href="" class="logo" ng-click="showChat(2)">Two</a></li>
+			  <li role="presentation" ng-class="{active: chatbox === 1}"><a href="" class="logo" ng-click="showChat(1)">1</a></li>
+			  <li role="presentation" ng-class="{active: chatbox === 2}"><a href="" class="logo" ng-click="showChat(2)">2</a></li>
 			</ul>
 
 			<div ng-show="chatbox === 1">

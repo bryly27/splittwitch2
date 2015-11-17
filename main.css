@@ -6,10 +6,13 @@
 
 .form {
 	height: 25px;
+	display: inline-block;
+	width: 100%;
 }
 
 .navbar-brand {
 	margin-bottom: 0px;
+	margin-top: 0px;
 }
 
 .navbar-default .navbar-brand, .logo {
@@ -31,6 +34,7 @@
 
 .grey {
 	background-color: #111111;
+	border-top: 1px solid black;
 }
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
@@ -42,6 +46,11 @@
 	margin: 0px;
 	border: 0px;
 }
+
+.channel {
+	z-index: 4;
+}
+
 
 @media (max-width: 991px) {
 	.body {

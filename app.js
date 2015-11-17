@@ -27,6 +27,10 @@ split.config(function($stateProvider, $urlRouterProvider){
 			url: '/four',
 			templateUrl: './partials/four.html',
 		})
+		.state('six', {
+			url: '/team',
+			templateUrl: './partials/six.html',
+		})
 
 
 })
